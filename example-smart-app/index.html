@@ -12,6 +12,7 @@
   <body>
     <div id='errors'>
     </div>
+     <script>
     FHIR.oauth2.init({
     	client_id: "9672cb0b-acff-4aad-9614-ee1aa9cbfe8b",
     	scope    : "openid patient/*.read"
@@ -20,5 +21,6 @@
 			console.log(JSON.strigify(client, null, 2))
 			alert("initialized!")
 		});
+	 </script>
   </body>
 </html>
