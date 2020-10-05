@@ -11,11 +11,9 @@
     <script>
     setTimeout(function () {
 	  	FHIR.oauth2.authorize({
-		  	"iss": " https://apporchard.epic.com/interconnect-aocurprd-oauth/api/FHIR/DSTU2/",
-	     	"client_id": "my client id ",
 	       	"redirect_uri" : "https://blevinger.github.io/smart-on-fhir-tutorial/example-smart-app/launch.html",
 		    "client_id": "9672cb0b-acff-4aad-9614-ee1aa9cbfe8b",
-		    "scope": "launch openid profile"
+		    "scope": "launch"
 		});
     }, 5000)
 
