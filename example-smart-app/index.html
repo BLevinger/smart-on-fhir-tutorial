@@ -15,7 +15,7 @@
      <script>
     FHIR.oauth2.init({
     	client_id: "9672cb0b-acff-4aad-9614-ee1aa9cbfe8b",
-    	scope    : "openid fhirUser patient/*.read"
+    	scope    : "openid fhirUser profile patient/*.read"
 	}).then(client => {
 			console.log(client)
 			console.log(JSON.stringify(client, null, 2))
