@@ -14,7 +14,7 @@
 	  	FHIR.oauth2.init({
 	       	"redirect_uri" : "https://blevinger.github.io/smart-on-fhir-tutorial/example-smart-app/launch-smart-sandbox.html",
 		    "client_id": "9672cb0b-acff-4aad-9614-ee1aa9cbfe8b",
-		    "scope": "launch openid patient/*.read"
+		    "scope": "launch openid"
 		}).then(client => {
 			console.log(client)
 			console.log(JSON.strigify(client, null, 2))
