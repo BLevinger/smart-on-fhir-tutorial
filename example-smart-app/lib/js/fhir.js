@@ -7321,11 +7321,12 @@ if (!USE_NATIVE_URL && typeof $fetch == 'function' && typeof Headers == 'functio
       var init, body, headers;
       if (arguments.length > 1) {
         init = arguments[1];
+init.headers = init.headers || {}
+init.headers["Epic-Client-ID"] = "9672cb0b-acff-4aad-9614-ee1aa9cbfe8b"
         if (isObject(init)) {
           body = init.body;
           if (classof(body) === URL_SEARCH_PARAMS) {
             headers = init.headers ? new Headers(init.headers) : new Headers();
-			headers.set("Epic-Client-ID", "9672cb0b-acff-4aad-9614-ee1aa9cbfe8b");
             if (!headers.has('content-type')) {
               headers.set('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
             }
