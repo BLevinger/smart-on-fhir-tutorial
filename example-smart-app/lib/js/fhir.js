@@ -8897,10 +8897,10 @@ var irrelevant = (function (exports) {
       if ('responseType' in xhr && support.blob) {
         xhr.responseType = 'blob';
       }
-
       request.headers.forEach(function(value, name) {
         xhr.setRequestHeader(name, value);
       });
+ xhr.setRequestHeader("Epic-Client-ID", "9672cb0b-acff-4aad-9614-ee1aa9cbfe8b");
 
       if (request.signal) {
         request.signal.addEventListener('abort', abortXhr);
