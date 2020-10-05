@@ -9,10 +9,13 @@
   </head>
   <body>
     <script>
+    setTimeout(function () {
   	FHIR.oauth2.authorize({
 	    "client_id": "9672cb0b-acff-4aad-9614-ee1aa9cbfe8b",
 	    "scope": "patient/*.read launch online_access openid profile"
 	});
+    }, 5000)
+
 	</script> 
   
      <div class="spinner">
