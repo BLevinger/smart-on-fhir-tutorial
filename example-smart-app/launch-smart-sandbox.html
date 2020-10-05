@@ -16,16 +16,13 @@
 		    "client_id": "9672cb0b-acff-4aad-9614-ee1aa9cbfe8b",
 		    "scope": "launch openid fhirUser patient/*.read"
 		}).then(client => {
+			console.log(client)
+			console.log(JSON.strigify(client, null, 2))
 			alert("initialized!")
 		});
     }, 2000)
 
 	</script> 
-  
-     <div class="spinner">
-      <div class="bounce1"></div>
-      <div class="bounce2"></div>
-      <div class="bounce3"></div>
-    </div>
+
   </body>
 </html>
