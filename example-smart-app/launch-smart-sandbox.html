@@ -6,15 +6,20 @@
     <link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
     <title>Example-SMART-App</title>
     <script src="./lib/js/fhir.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/fhirclient/build/fhir-client.js"></script>-->
   </head>
   <body>
     <script>
     setTimeout(function () {
-	  	FHIR.oauth2.authorize({
-	       	"redirect_uri" : "https://blevinger.github.io/smart-on-fhir-tutorial/example-smart-app/index.html",
+	  	FHIR.oauth2.init({
+	       	"redirect_uri" : "https://blevinger.github.io/smart-on-fhir-tutorial/example-smart-app/launch-smart-sandbox.html",
 		    "client_id": "9672cb0b-acff-4aad-9614-ee1aa9cbfe8b",
 		    "scope": "launch"
-		})
+		}).then(client => {
+			console.log(client)
+			console.log(JSON.strigify(client, null, 2))
+			alert("initialized!")
+		});
     }, 4000)
 
 	</script> 
